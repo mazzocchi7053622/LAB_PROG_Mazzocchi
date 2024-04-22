@@ -1,4 +1,4 @@
-set(BINARY ${cmake_project_name})
+set(BINARY ${LAB_PROG_Mazzocchi})
 
 set(SOURCES ConcreteObserver.cpp Cartella.cpp Nota.cpp)
 
