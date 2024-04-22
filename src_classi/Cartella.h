@@ -13,8 +13,8 @@ private:
 protected:
     std::string nome; //nome della cartella
     std::list<Nota> listaNote; //lista di note
-    static std::list<Nota> notePreferite; //lista di note nei preferite
-    static std::list<Nota> noteBloccate; //lista di note bloccate
+    std::list<Nota> notePreferite; //lista di note nei preferite
+    std::list<Nota> noteBloccate; //lista di note bloccate
 
 public:
     explicit Cartella(const std::string &n) : nome(n) {};  //costruttore
@@ -33,9 +33,9 @@ public:
     void bloccaNota(const Nota &nota);
     void sbloccaNota(const Nota &nota);
     bool makeFavourite(Nota &nota);
-    static bool removeFavourite(const Nota &nota);
-    static std::list<std::string> listaBloccati();
-    static std::list<std::string> listaPreferiti();
+    bool removeFavourite(const Nota &nota);
+    std::list<std::string> listaBloccati();
+    std::list<std::string> listaPreferiti();
 
     //ricerca nota tramite il titolo
     bool findNota(const std::string &titolo, Nota &nota) const;

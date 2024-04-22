@@ -23,7 +23,6 @@ public:
 
     //overloading operatore ==
     bool operator==(const Nota& nota2) const;
-    Nota operator=(const Nota& nota2);
 };
 
 #endif //LAB_PROG_MAZZOCCHI_NOTA_H

@@ -57,7 +57,3 @@ bool Nota::operator==(const Nota &nota2) const {
         return false;
     }
 }
-
-Nota Nota::operator=(const Nota &nota2) {
-    return Nota(nota2.titolo, nota2.testo, nota2.blocc, nota2.pref);
-}

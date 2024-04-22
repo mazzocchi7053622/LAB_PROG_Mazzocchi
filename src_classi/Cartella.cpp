@@ -1,9 +1,6 @@
 #include <iostream>
 #include "Cartella.h"
 
-std::list<Nota> Cartella::notePreferite;
-std::list<Nota> Cartella::noteBloccate;
-
 const std::string &Cartella::getNome() const {
     return nome;
 }
@@ -35,7 +32,6 @@ bool Cartella::removeNota(const std::string titolo) {
     for (auto i : listaNote) {
         if (i.getTitolo() == titolo) {
             if (i.isBlocc()) { //se trova la nota ma è bloccata ne impedisce la cancellazione
-                std::cout<< "La nota è bloccata: impossibile cancellare" << std::endl;
                 return false;
             }
             //altrimenti procede a rimuoverla
@@ -86,7 +82,6 @@ bool Cartella::makeFavourite(Nota &nota) {
         else {
             i->setPref(true);
             notePreferite.push_back(*i);
-            std::cout << "Nota modificata e aggiunta ai preferiti." << std::endl;
             pref = true;
         }
     }
